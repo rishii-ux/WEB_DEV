@@ -1,2 +1,2 @@
 # WEB_DEV
-This is me getting my hands on web development. I am just learning the basics of web dev.
+The repository consists of all the elements required for builing a website including HTML,CSS and JS.
