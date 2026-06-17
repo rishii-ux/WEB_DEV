@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector: This selector targets HTML elements based on their tag name. For example, the following CSS rule will apply a background color of lightblue to all <div> elements in the document. */
+        div {
+            background-color: lightblue;
+        }
+         /* Class Selector: This selector targets HTML elements based on their class attribute. For example, the following CSS rule will apply a background color of lightblue to all elements with the class "lightblue". */ 
+         .lightblue {
+            background-color: lightblue;
+        }
+        /* Id selector: This selector targets HTML elements based on their id attribute. For example, the following CSS rule will apply a background color of lightblue to the element with the id "unique". */
+        #unique {
+            background-color: greenyellow;
+        }
+        /* Child Selector: This selector targets HTML elements that are direct children of a specified parent element. For example, the following CSS rule will apply a background color of lightblue to all <p> elements that are direct children of a <div> element. */
+            div > p {
+                color: yellow;
+                background-color: brown;
+            }
+            /* Descendant Selector: This selector targets HTML elements that are descendants of a specified parent element, regardless of their depth in the hierarchy. For example, the following CSS rule will apply a background color of lightblue to all <p> elements that are descendants of a <div> element. */
+            div p {
+                background-color: brown;
+            }
+            /* Universal Selector: This selector targets all HTML elements in the document. For example, the following CSS rule will apply a background color of lightblue to all elements in the document.  */
+            * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+            }
+            /* Pseudo-class Selector: This selector targets HTML elements based on their state or position in the document. For example, the following CSS rule will apply a background color of lightblue to all <p> elements that are the first child of their parent element.  */
+                a:visited{
+                    color: red;
+                }
+                a:link{
+                    color: green;
+                }
+                a:active{
+                    color: yellow;
+                }
+                a:hover{
+                    color: blue;
+                }
+                p:first-child{
+                    color: blue;
+                }
+                /* Where the paragaph is the first child of its parent element, it will be selected by the pseudo-class selector and the color will be changed to blue. */
+                p:nth-child(2){
+                    color: green;
+                }
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am first.</p>
+        <p>I am second.</p>
+    </main>
+    <div class="lightblue">
+        I am a div
+    </div>
+    <div id="unique">
+        I am another div
+        <footer>
+            I am a footer inside a div. I will be selected by the descendant selector because I
+            <p>
+                I am a paragraph inside inside a div. I will be selected by the child selector because I am a direct child of the div.
+            </p>
+        </footer>
+    </div>
+    <p>
+        I am a paragraph outside a div. I will not be selected by the child selector.
+    </p>
+    <div>
+        <p>
+            I am a paragraph inside a div. I can be selected by thedescendant selector because I am a descendant of the div.
+        </p>
+    </div>
+    <div>
+<a href="https://www.google.com">GOOGLE</a>
+<a href="https://www.facebook.com">FACEBOOK</a>
+    </div>
+</body>
+</html>

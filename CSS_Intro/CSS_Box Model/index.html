@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        .box {
+            width: 200px;
+            /* Width is a CSS property that defines the width of an element. It can be set using different values, such as pixels (px), percentages (%), or other units. In this case, the width is set to 200px for the box element. This means that the box element will have a fixed width of 200 pixels, regardless of the size of its content or the size of the viewport. */
+            height: 100px;
+            /* Height is a CSS property that defines the height of an element. It can be set using different values, such as pixels (px), percentages (%), or other units. In this case, the height is set to 100px for the box element. This means that the box element will have a fixed height of 100 pixels, regardless of the size of its content or the size of the viewport. */
+            background-color: lightblue;
+            margin: 20px;
+            padding: 20px;
+            /* Padding is a CSS property that defines the space between the content of an element and its border. It creates space inside the element, pushing the content away from the edges of the element. The padding can be set using different values for each side (top, right, bottom, left) or using shorthand properties. In this case, the padding is set to 20px for all sides of the box element. This means that there will be a 20px space between the content of the box element and its border. */
+            border: 2px solid black;
+        }
+        .box1 {
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        .box2 {
+            background-color: lightgreen;
+             padding: 10px;
+            margin: 25px;
+            /* Margin is a CSS property that defines the space outside the border of an element. It creates space between the element and its surrounding elements. The margin can be set using different values for each side (top, right, bottom, left) or using shorthand properties. In this case, the margin is set to 10px for all sides of the box2 element. This means that there will be a 10px space between the box2 element and any other elements around it. */
+            border: 2px solid black;
+            height: 200px;
+            /* Border is a CSS property that defines the border of an element. It can be set using different values for each side (top, right, bottom, left) or using shorthand properties. In this case, the border is set to 2px solid black for all sides of the box2 element. This means that there will be a 2px solid black border around the box2 element.  */
+            box-sizing: border-box;
+            /* Box-sizing is a CSS property that defines how the total width and height of an element are calculated. By default, the width and height of an element are calculated based on the content area, which does not include padding and border. However, when you set box-sizing to border-box, the width and height of the element include the content area, padding, and border. This means that if you set a width of 200px for an element with box-sizing: border-box, the total width of the element will be 200px, including any padding and border. This can make it easier to manage the layout of elements on a page, as you don't have to worry about adding extra space for padding and borders when calculating the total size of an element. */
+        }
+        /* Margin collapsing is a phenomenon in CSS where the vertical margins of two adjacent elements collapse into a single margin. This means that if two elements have vertical margins that touch each other, the larger of the two margins will be used, and the smaller margin will be ignored. For example, if one element has a margin of 20px and the adjacent element has a margin of 10px, the resulting margin between the two elements will be 20px, not 30px. Margin collapsing can occur in various situations, such as when two block-level elements are stacked vertically or when an element has no content and its margins collapse with its parent element's margins. It is important to be aware of margin collapsing when designing layouts in CSS, as it can affect the spacing between elements and lead to unexpected results. */
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am an another box</div>
+</body>
+</html>
